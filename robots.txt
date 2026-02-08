@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /*.html$
+Allow: /*.htm$
+Allow: /*.css$
+
+Disallow: /
+Disallow: /clipaudio.txt
+

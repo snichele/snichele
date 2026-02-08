@@ -1,0 +1,295 @@
+/*!* Minimalist base *!*/
+/*@font-face {*/
+/*    font-family: 'fabfont';*/
+/*    src: url('/font/DejaVuSansMono.woff2');*/
+/*    font-display: block;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'fabfont';*/
+/*    src: url('/font/DejaVuSansMono-Bold.woff2');*/
+/*    font-weight: bold;*/
+/*    font-display: block;*/
+/*}*/
+
+/* ---------------- Common ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html {
+    font-family: ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    "DejaVu Sans Mono",
+    "Ubuntu Mono",
+    monospace;
+    max-width: 900px;
+    padding: 0 3% 0 2%;
+    margin: 0 auto;
+    background: #f5f5f0;
+    color: #111;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+
+h1 { font-size: 2rem; }
+
+h2 { font-size: 1.5rem; margin-bottom: 1.5rem;}
+
+h3 { font-size: 1.2rem; margin-bottom: 1.3rem;}
+
+h1::before, h2::before, h3::before {
+    content: "> ";
+    opacity: 0.8;
+}
+
+p {
+    margin: 1rem;
+    text-align: justify;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        background: #23231f;
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
+/* Themes switch */
+html.light {
+    background: #f5f5f0;
+    color: #111;
+}
+
+html.dark {
+    background: #23231f;
+    color: #fff;
+}
+
+html.dark a { color: #fff; }
+
+html.light a { color: #000; }
+
+/* empêche le media query d’écraser le choix manuel */
+html.light,
+html.dark {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border: 0 solid currentColor;
+    background: none;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ------- Lien menu cliquables - ancre interne --------- */
+header a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.75;
+    transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+header a:hover {
+    opacity: 1;
+    border-bottom: 2px solid currentColor;
+}
+
+header a:focus-visible {
+    outline: 1px dashed currentColor;
+    outline-offset: 3px;
+}
+
+header a::before {
+    content: "[";
+    opacity: 0.5;
+}
+
+header a::after {
+    content: "]";
+    opacity: 0.5;
+}
+
+
+/* ---------------- Hilite de la zone ciblée par une ancre #xxx (theme light et dark) ---------------- */
+:target {
+    animation: target-flash 2.2s cubic-bezier(.22, .9, .3, 1);
+    border-radius: 4px;
+}
+
+@keyframes target-flash {
+    0% {
+        background: rgba(255, 200, 0, 0.55);
+        box-shadow: 0 0 0 6px rgba(255, 200, 0, 0.45);
+    }
+    35% {
+        background: rgba(255, 200, 0, 0.35);
+        box-shadow: 0 0 0 10px rgba(255, 200, 0, 0.25);
+    }
+    100% {
+        background: transparent;
+        box-shadow: 0 0 0 0 rgba(255, 200, 0, 0);
+    }
+}
+
+html.dark :target {
+    animation: target-flash-dark 2.4s cubic-bezier(.22, .9, .3, 1);
+    border-radius: 4px;
+}
+
+@keyframes target-flash-dark {
+    0% {
+        background: rgba(120, 180, 255, 0.35);
+        box-shadow: 0 0 0 6px rgba(120, 180, 255, 0.55),
+        0 0 18px 6px rgba(120, 180, 255, 0.35);
+    }
+    40% {
+        background: rgba(120, 180, 255, 0.18);
+        box-shadow: 0 0 0 10px rgba(120, 180, 255, 0.35),
+        0 0 24px 8px rgba(120, 180, 255, 0.25);
+    }
+    100% {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+
+/* ---------------- Content zones ---------------- */
+
+#studies,
+#experience,
+#projects,
+#skills,
+#newses {
+    margin-top: 2.5rem;
+}
+
+.study,
+.job, .project, .skill, .news {
+    margin-bottom: 1.4rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid currentColor;
+}
+
+details {
+    padding: 0.6rem 0.8rem;
+    margin-top: 0.3rem;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+@media (prefers-color-scheme: dark) {
+    details {
+        background: rgba(255, 255, 255, 0.06);
+    }
+}
+
+summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    position: relative;
+    padding-left: 1rem;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-weight: normal;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+summary small {
+    font-weight: normal;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 0.15rem;
+}
+
+details ul,
+details p {
+    margin-top: 1.6rem;
+    margin-left: 2.6rem;
+}
+
+details ul ul {
+    margin-top: .2rem;
+}
+
+details p {
+    text-align: justify;
+}
+
+details li {
+    margin-bottom: 0.25rem;
+}
+
+code {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 0.12em 0.35em;
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: currentColor;
+}
+
+@media (prefers-color-scheme: dark) {
+    code {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+    }
+}

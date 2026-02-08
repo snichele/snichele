@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--
+  MINIMALIST WEB PAGE
+  In an era of bloated Web, a minimalist webpage with fast loading and low network fingerprint
+  is a must.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <!-- For mobile device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio Tim NICHELE</title>
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio Tim NICHELE</h1>
+      <h2>Étudiant en informatique, systèmes et réseaux (BTS)</h2>
+      <button id="theme-toggle" aria-label="Changer le thème">🌓</button>
+      <p>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets et réalisations</a>
+        <a href="#experience">Expériences professionnelles</a>
+        <a href="#studies">Diplômes et formation</a>
+      </p>
+    </header>
+
+    <main>
+
+      <section id="a-propos" aria-labelledby="titre-a-propos">
+        <h3 id="titre-a-propos">En quelques mots...</h3>
+        <p>
+          Je prépare actuellement le <strong>BTS SIO option SISR</strong>,
+          après avoir obtenu le titre de <strong>Technicien d'assistance informatique</strong> (TAI).
+        </p>
+        <p>
+          Intéressé depuis toujours par l'informatique et ses aspects techniques (systèmes, composants, réseau…),
+          je souhaite en faire mon métier, dans l'assistance utilisateur, côté systèmes ou infrastructure.
+        </p>
+        <p>
+          Ce site a pour but de vous présenter mon cursus, mes compétences <strong>acquises</strong> et <strong>en
+          cours</strong> d'acquisition ainsi que mes projets et expériences professionnelles
+        </p>
+        <p>Je suis parfaitement à l'aise en anglais oral (compréhension et expression) et lis principalement des sources
+          anglaises.</p>
+        <p>
+          <a href="#contacts">Pour me contacter &gt;&gt;</a>
+        </p>
+      </section>
+
+      <section id="parcours" aria-labelledby="titre-parcours">
+        <h3 id="titre-parcours">Parcours et perspectives</h3>
+        <p>
+          Après avoir obtenu le bac général en 2024 (options cinéma, mathématiques et informatique),
+          j'ai choisi de passer un titre RNCP de Technicien d'assistance informatique afin de valoriser mes compétences
+          et savoir-faire (2025). Autodidacte, curieux et apprenant vite, j'étais en effet déjà familier du maintien
+          en condition opérationnelle optimale (mise à jour logicielle et matérielle) de ma machine, de divers
+          équipements
+          et de leur intégration dans le réseau domestique.
+        </p>
+        <p>
+          Désireux de compléter mes connaissances théoriques et pratiques, au-delà du simple outil de travail qu'est
+          l'ordinateur, j'ai décidé de préparer un BTS SIO option réseaux en formation initiale dès la rentrée 2025.
+        </p>
+        <p>
+          À l'issue de ce BTS, j'envisage une éventuelle poursuite d'études en cybersécurité, un secteur porteur.
+        </p>
+      </section>
+
+      <section id="skills" aria-labelledby="titre-skills">
+        <h3 id="titre-skills">Compétences <em>(dont en cours d'acquisition)</em></h3>
+
+        <article class="skill">
+          <details>
+            <summary>
+              Poste Windows 10
+            </summary>
+            <ul>
+              <li>Maintien en condition opérationnelle optimale (maj système régulière, antivirus, configuration
+                optimale du système
+                (optimisation des options graphiques), mise à jour des logiciels installés (<code>nom de la
+                  commande)</code></li>
+              <li>Upgrade matériel : changement de CPU, mise à jour de BIOS et optimisation de la configuration,
+                ajout de mémoire, changement de ventirad, changement de carte graphique,
+                installation de watercooling
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              Poste Linux (server / desktop) - Debian
+            </summary>
+            <ul>
+              <li><em>Utilisation de la ligne de commande autant que possible.</em></li>
+              <li>Installation du système</li>
+              <li>Utilisateurs, groupes et droits d'accès
+                <ul>
+                  <li>Compte root, sudo</li>
+                  <li>Création d'utilisateurs et de groupes (<code>xxxx, xxxx</code>)</li>
+                  <li>Gestion des droits sur les fichiers et répertoires (<code>chown, chgroup, chmod</code>)</li>
+                </ul>
+              </li>
+              <li>Utilisation courante du gestionnaire de paquets :
+                <ul>
+                  <li>choix du repository adapté (vitesse, proximité)</li>
+                  <li>installation de nouveaux paquets</li>
+                  <li>mise à jour système (<code>apt update, apt upgrade, apt autoremove, apt install</code>)</li>
+                </ul>
+              </li>
+              <li>Installation et configuration de :
+                <ul>
+                  <li>SSH Server</li>
+                  <li>Nginx</li>
+                </ul>
+              </li>
+              <li>Filesystem
+                <ul>
+                  <li>Compréhension de la structure (<code>/etc, /var, /usr, /srv...</code>)</li>
+                  <li>Navigation, consultation de fichiers, copie, déplacement...<code>ls, cd, cp, mv, less,
+                    nano...</code></li>
+                </ul>
+              </li>
+              <li>
+                Accès via ssh (<code>putty, ssh client</code>)
+              </li>
+              <li>Système
+                <ul>
+                  <li>États des services et processus lancés, arrêt, relance (<code>ps, htop, systemctl status,
+                    systemctl
+                    stop, systemctl restart</code>)
+                  </li>
+                  <li>Examen des logs système (<code>journalctl</code>)</li>
+                </ul>
+              </li>
+              <li>Fiabilité
+                <ul>
+                  <li>/En cours/ RAID et fiabilité des données</li>
+                  <li>/En cours/ Backup des données</li>
+                  <li>/En cours/ Surveillances</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              Travail collaboratif et support
+            </summary>
+            <ul>
+              <li>Utilisation d'outils de ticket (création de tickets, cycle de vie, rôles) - GLPI, ServiceNow...</li>
+              <li>Utilisation d'outil de gestion d'inventaire (OCS Inventory)</li>
+              <li>Kanban (tâches et cycle de vie des tâches)</li>
+              <li>Git (<code>git fetch, git add, git commit, git push...</code>)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>
+              Réseau
+            </summary>
+            <ul>
+              <li>Bonne compréhension des principes VLAN, IP (classes, masques, CIDR...), DHCP</li>
+              <li>Capacité à proposer un plan d'adressage ad-hoc</li>
+              <li>Configuration de switch et de routeurs Cisco (VLAN, IP-RELAY, Trunk...) en cohérence VLAN, réseau
+                IP...
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              Dépannage
+            </summary>
+            <ul>
+              <li>Démarrage sur clé USB / CD de boot</li>
+              <li>Outils de diagnostic (mémoire, disque, réseau)</li>
+            </ul>
+          </details>
+
+        </article>
+
+      </section>
+
+      <section id="projects" aria-labelledby="titre-projects">
+        <h3 id="titre-projects">Projets et réalisations</h3>
+
+        <article class="project">
+          <details>
+            <summary>
+              Home server Debian 13
+            </summary>
+            <ul>
+              <li>Installation d'un serveur Debian de test sur une machine du réseau personnel</li>
+              <li>Installation de SSH server pour l'accès distant</li>
+              <li>Installation de nginx pour tester la publication de site web</li>
+              <li>Maintien en condition opérationnelle de la machine (update, état des process, espace disque)</li>
+              <li>/En cours/ : monitoring de la machine</li>
+              <li>/En cours/ : backup des données</li>
+            </ul>
+          </details>
+        </article>
+        <article class="project">
+          <details>
+            <summary>
+              Réhabilitation d'un ancien PC (2004 - Pentium 4 i386 - 2Gigas)
+            </summary>
+            <ul>
+              <li>Vérification du matériel (boot correct)</li>
+              <li>Mem-test (Hiren boot CD 15.2)</li>
+              <li>Installation d'un nouveau disque dur et test du disque (Hiren boot CD 15.2)</li>
+              <li>Installation d'une version de linux Debian compatible i386 (debian-12.11.0-i386-netinst)</li>
+              <li>/En cours/ Reflexion sur l'utilisation (serveur de backup...)</li>
+            </ul>
+          </details>
+        </article>
+
+      </section>
+
+      <section id="experience" aria-labelledby="titre-experience">
+        <h3 id="titre-experience">Expériences professionnelles</h3>
+
+        <article class="job">
+          <details>
+            <summary>
+              Stage Technicien d'assistance informatique
+              <small>Novembre 2024 • CNP Assurances — Issy-les-Moulineaux</small>
+            </summary>
+            <ul>
+              <li>Assistance et dépannage des utilisateurs (fonctionnement de l'outil de tickets)</li>
+              <li>Mise en service et dépannage d'équipements numériques des salles de réunion :
+                maintien en condition opérationnelle et assistance utilisateur
+              </li>
+              <li>Observation des éléments d'infrastructure (switch, routeurs...) avec les techniciens réseau</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="job">
+          <details>
+            <summary>
+              Stage de développement web
+              <small>Février 2020 • Pacifica — Paris</small>
+            </summary>
+            <ul>
+              <li>Découverte et pratique du HTML</li>
+              <li>Initiation au CSS</li>
+              <li>Bases du JavaScript</li>
+            </ul>
+          </details>
+        </article>
+      </section>
+
+
+      <section id="studies" aria-labelledby="titre-studies">
+        <h3 id="titre-studies">Diplômes et formations</h3>
+
+        <article class="study">
+          <details>
+            <summary>
+              /En cours/ BTS Services Informatiques aux Organisations (SIO) — Option SISR
+              <small>Septembre 2025 – Juin 2027 • CNED</small>
+            </summary>
+            <ul>
+              <li>Support et exploitation des services informatiques</li>
+              <li>Administration des systèmes et réseaux</li>
+              <li>Supervision, sauvegarde et continuité de service</li>
+              <li>Sécurité des infrastructures et des données</li>
+              <li>Gestion des incidents et assistance aux utilisateurs</li>
+              <li>Veille technologique et respect des normes</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="study">
+          <details>
+            <summary>
+              Technicien d'assistance informatique (TAI)
+              <small>Septembre 2024 – Mars 2025 • Aston, Arcueil</small>
+            </summary>
+            <ul>
+              <li>Mettre en service des équipements numériques</li>
+              <li>Intervenir sur les éléments de l'infrastructure</li>
+              <li>Assister ou dépanner les clients ou les utilisateurs</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="study">
+          <details>
+            <summary>
+              Baccalauréat Général — Spécialités Mathématiques et NSI
+              <small>2024 • Candidat libre</small>
+            </summary>
+            <ul>
+              <li>Spécialité suivie en première : Cinéma.</li>
+              <li>Math : 15/20 et NSI : 15/20</li>
+              <li>Grand oral : "Sûreté des communications sur internet (SSL et cryptage)" - 15/20.</li>
+            </ul>
+          </details>
+        </article>
+      </section>
+
+
+      <section id="newses" aria-labelledby="titre-newses">
+        <h3 id="titre-newses">Veille</h3>
+
+        <article class="news">
+          <details>
+            <summary>
+              Youtube
+            </summary>
+            Diverses chaînes youtube variées parlant d'IT.
+          </details>
+        </article>
+      </section>
+      <section id="contacts" aria-labelledby="titre-contacts">
+        <h3 id="titre-contacts">Contact</h3>
+
+        <article class="contact">
+          <span id="musicZone"><span style="cursor: pointer">Chargement en cours...</span></span>
+        </article>
+
+      </section>
+    </main>
+  </body>
+  <!-- Memo : must be at the end of the file because the button must already exist to work !-->
+  <script id="2t5ywd">
+    const btn = document.getElementById("theme-toggle");
+    const root = document.documentElement;
+
+    const saved = localStorage.getItem("theme");
+    if (saved) root.className = saved;
+
+    btn.addEventListener("click", () => {
+      const next = root.classList.contains("dark") ? "light" : "dark";
+      root.classList.remove("light", "dark");
+      root.classList.add(next);
+      localStorage.setItem("theme", next);
+    });
+  </script>
+
+  <script>
+    let _0xA = false;
+
+    const _0xB = new (window.AudioContext || window.webkitAudioContext)();
+
+    /* --- crypto material (16/24/32 bytes) --- */
+    const _0xC = new TextEncoder().encode("n0tS0Rand0mKey!!");
+    const _0xD = Uint8Array.from([12, 44, 91, 3, 7, 88, 19, 201, 77, 2, 9, 33]);
+
+    async function _0xE() {
+      return crypto.subtle.importKey(
+        "raw",
+        _0xC,
+        {name: "AES-GCM"},
+        false,
+        ["decrypt"]
+      );
+    }
+
+    function _0xF(_0xG) {
+      return Uint8Array.from(atob(_0xG), c => c.charCodeAt(0));
+    }
+
+    async function unlockAudio() {
+      if (_0xA) return;
+      await _0xB.resume();   // preuve d'interaction humaine
+      _0xA = true;
+      await _0xH();
+    }
+
+    async function _0xH() {
+      try {
+        const _0xI = await fetch("./clipaudio.txt", {
+          method: "GET",
+          cache: "no-store"
+        });
+
+        if (!_0xI.ok) throw new Error();
+
+        const _0xJ = await _0xI.text();        // contenu chiffré base64
+        const _0xK = await _0xE();
+
+        const _0xL = await crypto.subtle.decrypt(
+          {name: "AES-GCM", iv: _0xD},
+          _0xK,
+          _0xF(_0xJ.trim())
+        );
+
+        const _0xM = new TextDecoder().decode(_0xL);
+        document.getElementById("musicZone").innerHTML = _0xM;
+
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    window.addEventListener("click", unlockAudio, {once: true});
+    window.addEventListener("keydown", unlockAudio, {once: true});
+    window.addEventListener("touchstart", unlockAudio, {once: true});
+  </script>
+
+</html>
